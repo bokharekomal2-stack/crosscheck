@@ -1,0 +1,41 @@
+:root{--bg:#0b1426;--card:#14203a;--text:#f4f1ea;--muted:#b9c2d6;--amber:#ffb84d;--teal:#4fd1c5;--line:#2c3b5c;font-size:18px}
+.app.big{font-size:22px}
+.app.hc{--bg:#000;--card:#0a0a0a;--text:#fff;--muted:#fff;--line:#fff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.55}
+.app{min-height:100vh;max-width:760px;margin:0 auto;padding:1.5rem 1rem 4rem;background:var(--bg);color:var(--text)}
+.skip{position:absolute;left:-999px}.skip:focus{left:1rem;top:1rem;background:var(--text);color:var(--bg);padding:.5rem;z-index:9}
+.header{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:flex-start;margin-bottom:2rem}
+.logo{font-size:2rem;letter-spacing:.2em;margin:0}.tagline{color:var(--muted);margin:.25rem 0 0}
+.controls{display:flex;gap:.5rem}
+button{min-height:44px;transition:background .15s,border-color .15s;font:inherit;color:var(--text);background:transparent;border:2px solid var(--line);border-radius:12px;padding:.6rem 1rem;cursor:pointer}
+button:hover:not(:disabled){border-color:var(--text)}button:disabled{opacity:.5;cursor:not-allowed}
+button[aria-pressed=true]{background:var(--teal);color:#06202a;border-color:var(--teal)}
+.support{font-size:1.15rem;color:var(--muted);margin:0 0 1.5rem}
+.choices button.picked{border-color:var(--teal);background:#4fd1c522}
+.primary{background:var(--amber);color:#1a1200;border-color:var(--amber);font-weight:700}
+.link{border:0;text-decoration:underline;color:var(--muted)}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+.field{display:flex;flex-direction:column;gap:.4rem;margin-bottom:1.25rem}
+label{font-weight:600;font-size:1.1rem}
+textarea{font:inherit;color:var(--text);background:var(--card);border:2px solid var(--line);border-radius:12px;padding:.8rem;resize:vertical}
+.count,.privacy,.progress{color:var(--muted);font-size:.85rem}.count{align-self:flex-end}
+.row,.choices{display:flex;flex-wrap:wrap;gap:.75rem;margin:1rem 0}.choices button{flex:1 1 200px;text-align:left}
+.card{background:var(--card);border-radius:20px;padding:1.5rem;box-shadow:0 8px 30px #0006;animation:in .3s ease-out}
+.card.resolved{border-top:4px solid var(--teal)}
+.badge{color:var(--amber);letter-spacing:.08em;font-size:1.1rem}
+.quote{margin:0;padding:1rem 1.1rem;border-left:4px solid var(--amber);font-size:1.4rem;line-height:1.4;background:#0003;border-radius:8px}
+.quote span{display:block;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.zigzag{display:block;width:60%;height:14px;margin:.6rem auto;color:var(--amber)}
+.vs{display:flex;align-items:center;gap:.75rem;color:var(--amber);font-weight:700;letter-spacing:.2em}.vs .zigzag{flex:1;margin:.6rem 0}
+.goals{display:flex;gap:1rem;flex-wrap:wrap}.goals div{flex:1 1 200px}.goals dt{color:var(--muted);font-size:.85rem}.goals dd{margin:0;font-weight:600}
+.prompt{font-style:italic}.alert{border:2px solid var(--amber);border-radius:12px;padding:.75rem}.note{color:var(--amber)}
+.closing{font-size:1.2rem;margin:1.5rem 0}.refusal{margin-top:1.5rem;text-align:center}.status{min-height:1.5rem;color:var(--muted)}
+@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@media (max-width:420px){.logo{font-size:1.5rem}}
+input{font:inherit;color:var(--text);background:var(--card);border:2px solid var(--line);border-radius:12px;padding:.7rem;min-height:44px;width:100%}
+.nav{display:flex;flex-wrap:wrap;gap:.5rem;width:100%}.nav button[aria-current=page]{border-color:var(--teal);color:var(--teal)}
+.check{display:flex;align-items:center;gap:.6rem;margin:.5rem 0}.check input{width:auto;min-height:0}
+.list{list-style:none;padding:0;display:grid;gap:.6rem}.list button{width:100%;text-align:left;display:flex;flex-direction:column;gap:.2rem}.list span{color:var(--muted);font-size:.85rem}
+.card .card{margin-top:1rem;background:#0003;box-shadow:none}section h2{margin-top:0}
